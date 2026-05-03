@@ -1,0 +1,137 @@
+sylius_fixtures:
+    suites:
+        app:
+            listeners:
+                orm_purger: ~
+                images_purger: ~
+                logger: ~
+            fixtures:
+                admin_user:
+                    name: 'admin_user'
+                    options:
+                        custom:
+                            -   email: 'sylius@example.com'
+                                username: 'sylius'
+                                password: 'sylius'
+                                enabled: true
+                                locale_code: 'fr_FR'
+                                first_name: 'John'
+                                last_name: 'Doe'
+                                avatar: '@SyliusCoreBundle/Resources/fixtures/adminAvatars/john.webp'
+                locale:
+                    options:
+                        locales:
+                            - 'fr_FR'
+                            - 'fr_BE'
+                            - 'fr_CH'
+                currency:
+                    options:
+                        currencies:
+                            - 'EUR'
+                            - 'CHF'
+                geographical:
+                    options:
+                        countries:
+                            - 'FR'
+                            - 'BE'
+                            - 'CH'
+                        zones:
+                            FR:
+                                name: 'France'
+                                countries:
+                                    - 'FR'
+                            BE:
+                                name: 'Belgique'
+                                countries:
+                                    - 'BE'
+                            CH:
+                                name: 'Suisse'
+                                countries:
+                                    - 'CH'
+                menu_taxon:
+                    name: taxon
+                    options:
+                        custom:
+                            category:
+                                code: 'ROOT'
+                                name: 'Menu principal'
+                                slug: 'category'
+                                description: 'Racine du menu principal'
+                channel:
+                    options:
+                        custom:
+                            new_fashion_fr:
+                                name: 'NewFashion France'
+                                code: 'FR_SHOP'
+                                color: '#318ce7'
+                                default_locale: 'fr_FR'
+                                base_currency: 'EUR'
+                                default_tax_zone: 'FR'
+                                tax_calculation_strategy: 'order_items_based'
+                                locales:
+                                    - 'fr_FR'
+                                currencies:
+                                    - 'EUR'
+                                enabled: true
+                                hostname: 'fr.%env(resolve:SYLIUS_FIXTURES_HOSTNAME)%'
+                                theme_name: '%env(resolve:SYLIUS_FIXTURES_THEME_NAME)%'
+                                shop_billing_data:
+                                    company: 'NewFashion'
+                                    tax_id: '0001112222'
+                                    country_code: 'FR'
+                                    street: '123 rue du commerce'
+                                    city: 'Paris'
+                                    postcode: '75000'
+                                menu_taxon: 'ROOT'
+                                contact_phone_number: '+33 1 23 45 67 89'
+                                contact_email: 'contact@new-fashion.fr'
+                            new_fashion_be:
+                                name: 'NewFashion Belgique'
+                                code: 'BE_SHOP'
+                                color: '#fcd465'
+                                default_locale: 'fr_BE'
+                                base_currency: 'EUR'
+                                default_tax_zone: 'BE'
+                                tax_calculation_strategy: 'order_items_based'
+                                locales:
+                                    - 'fr_BE'
+                                currencies:
+                                    - 'EUR'
+                                enabled: true
+                                hostname: 'be.%env(resolve:SYLIUS_FIXTURES_HOSTNAME)%'
+                                theme_name: '%env(resolve:SYLIUS_FIXTURES_THEME_NAME)%'
+                                shop_billing_data:
+                                    company: 'NewFashion'
+                                    tax_id: '3334445555'
+                                    country_code: 'BE'
+                                    street: '123 rue du commerce'
+                                    city: 'Bruxelles'
+                                    postcode: '1000'
+                                menu_taxon: 'ROOT'
+                                contact_phone_number: '+32 1 23 45 67 89'
+                                contact_email: 'contact@new-fashion.be'
+                            new_fashion_ch:
+                                name: 'NewFashion Suisse'
+                                code: 'CH_SHOP'
+                                color: '#da291c'
+                                default_locale: 'fr_CH'
+                                base_currency: 'CHF'
+                                default_tax_zone: 'CH'
+                                tax_calculation_strategy: 'order_items_based'
+                                locales:
+                                    - 'fr_CH'
+                                currencies:
+                                    - 'CHF'
+                                enabled: true
+                                hostname: 'ch.%env(resolve:SYLIUS_FIXTURES_HOSTNAME)%'
+                                theme_name: '%env(resolve:SYLIUS_FIXTURES_THEME_NAME)%'
+                                shop_billing_data:
+                                    company: 'NewFashion'
+                                    tax_id: '6667778888'
+                                    country_code: 'CH'
+                                    street: '123 rue du commerce'
+                                    city: 'Berne'
+                                    postcode: '3000'
+                                menu_taxon: 'ROOT'
+                                contact_phone_number: '+41 1 23 45 67 89'
+                                contact_email: 'contact@new-fashion.ch'
