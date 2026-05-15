@@ -135,3 +135,128 @@ sylius_fixtures:
                                 menu_taxon: 'ROOT'
                                 contact_phone_number: '+41 1 23 45 67 89'
                                 contact_email: 'contact@new-fashion.ch'
+                customer_group:
+                    options:
+                        custom:
+                            customer:
+                                code: 'customer'
+                                name: 'Clients'
+                            employee:
+                                code: 'employee'
+                                name: 'Employés'
+                shop_user:
+                    options:
+                        random: 20
+                        custom:
+                            -   email: 'sylius@example.com'
+                                first_name: 'John'
+                                last_name: 'Doe'
+                                password: 'sylius'
+                                customer_group: 'employee'
+                            -   email: 'shop@example.com'
+                                first_name: 'Jane'
+                                last_name: 'Doe'
+                                password: 'sylius'
+                                customer_group: 'customer'
+                payment_method:
+                    options:
+                        custom:
+                            bank_check:
+                                code: 'bank_check'
+                                name: 'Chèque'
+                                description: 'Paiement par chèque'
+                                enabled: true
+                                gatewayName: 'Offline'
+                                gatewayFactory: 'offline'
+                                channels:
+                                    - 'FR_SHOP'
+                                    - 'BE_SHOP'
+                                    - 'CH_SHOP'
+                tax_category:
+                    options:
+                        custom:
+                            vat_standard_rate:
+                                code: 'vat_standard_rate'
+                                name: 'TVA - taux normal'
+                tax_rate:
+                    options:
+                        custom:
+                            fr_vat_standard_rate:
+                                code: 'fr_vat_standard_rate'
+                                name: 'TVA - taux normal'
+                                zone: 'FR'
+                                category: 'vat_standard_rate'
+                                amount: 0.2
+                            be_vat_standard_rate:
+                                code: 'be_vat_standard_rate'
+                                name: 'TVA - taux normal'
+                                zone: 'BE'
+                                category: 'vat_standard_rate'
+                                amount: 0.21
+                            ch_vat_standard_rate:
+                                code: 'ch_vat_standard_rate'
+                                name: 'TVA - taux normal'
+                                zone: 'CH'
+                                category: 'vat_standard_rate'
+                                amount: 0.081
+                shipping_method:
+                    options:
+                        custom:
+                            la_poste:
+                                code: 'la_poste'
+                                name: 'La Poste'
+                                zone: 'FR'
+                            bpost:
+                                code: 'bpost'
+                                name: 'Bpost'
+                                zone: 'BE'
+                            swiss_post:
+                                code: 'swiss_post'
+                                name: 'La Poste Suisse'
+                                zone: 'CH'
+                promotion:
+                    options:
+                        custom:
+                            welcome:
+                                code: 'welcome'
+                                name: 'Welcome 10'
+                                channels:
+                                    - 'FR_SHOP'
+                                    - 'BE_SHOP'
+                                    - 'CH_SHOP'
+                                exclusive: true
+                                coupon_based: true
+                                coupons:
+                                    -   code: 'WELCOME10'
+                                        per_customer_usage_limit: 1
+                                        reusable_from_cancelled_orders: true
+                                rules:
+                                    -   type: 'customer_group'
+                                        configuration:
+                                            group_code: 'customer'
+                                    -   type: 'nth_order'
+                                        configuration:
+                                            nth: 1
+                                actions:
+                                    -   type: 'order_percentage_discount'
+                                        configuration:
+                                            percentage: 10.00
+                            team:
+                                code: 'team'
+                                name: 'Team 20'
+                                channels:
+                                    - 'FR_SHOP'
+                                    - 'BE_SHOP'
+                                    - 'CH_SHOP'
+                                exclusive: true
+                                coupon_based: true
+                                coupons:
+                                    -   code: 'TEAM20'
+                                rules:
+                                    -   type: 'customer_group'
+                                        configuration:
+                                            group_code: 'employee'
+                                actions:
+                                    -   type: 'order_percentage_discount'
+                                        configuration:
+                                            percentage: 20.00
