@@ -54,7 +54,7 @@ sylius_fixtures:
                         custom:
                             category:
                                 code: 'ROOT'
-                                name: 'Menu principal'
+                                name: 'Catégories'
                                 slug: 'category'
                                 description: 'Racine du menu principal'
                 channel:
