@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12fd0b1020ae04606500c1380baa4b65",
+    "content-hash": "e3a77046cec3ec470b1de4c12eb83169",
     "packages": [
         {
             "name": "alcohol/iso4217",
@@ -15591,6 +15591,7 @@
             "support": {
                 "source": "https://github.com/FriendsOfBehat/Mink/tree/v1.11.0"
             },
+            "abandoned": "behat/mink",
             "time": "2024-02-06T13:17:10+00:00"
         },
         {
@@ -15785,24 +15786,30 @@
         },
         {
             "name": "friends-of-behat/page-object-extension",
-            "version": "v0.3.2",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfBehat/PageObjectExtension.git",
-                "reference": "2e65b0bd7cca6ff2085b0fa885dc13dc57b18d4b"
+                "reference": "60a0ef19c3577b66fa0db91e947b7062ead1ffaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfBehat/PageObjectExtension/zipball/2e65b0bd7cca6ff2085b0fa885dc13dc57b18d4b",
-                "reference": "2e65b0bd7cca6ff2085b0fa885dc13dc57b18d4b",
+                "url": "https://api.github.com/repos/FriendsOfBehat/PageObjectExtension/zipball/60a0ef19c3577b66fa0db91e947b7062ead1ffaa",
+                "reference": "60a0ef19c3577b66fa0db91e947b7062ead1ffaa",
                 "shasum": ""
             },
             "require": {
-                "behat/mink": "^1.7",
-                "php": "^7.1 || ^8.0"
+                "behat/mink": "^1.9",
+                "php": "^8.3"
             },
             "require-dev": {
-                "symfony/routing": "^3.4 || ^4.4 || ^5.1"
+                "behat/behat": "^3.31 || 4.x-dev",
+                "friendsofphp/php-cs-fixer": "^3.75",
+                "phpstan/phpstan": "^2.0",
+                "symfony/filesystem": "^7.4 || ^8.0",
+                "symfony/process": "^7.4 || ^8.0",
+                "symfony/routing": "^7.4 || ^8.0",
+                "symfony/yaml": "^7.4 || ^8.0"
             },
             "suggest": {
                 "symfony/routing": "Allow better support for PageObject pattern in Symfony applications"
@@ -15810,7 +15817,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.3-dev"
+                    "dev-master": "0.4-dev"
                 }
             },
             "autoload": {
@@ -15830,7 +15837,7 @@
                 {
                     "name": "Kamil Kokot",
                     "email": "kamil@kokot.me",
-                    "homepage": "http://kamil.kokot.me"
+                    "homepage": "https://kamilkokot.com"
                 },
                 {
                     "name": "Mateusz Zalewski",
@@ -15841,9 +15848,9 @@
             "description": "Provides default classes for Page object pattern in Behat",
             "support": {
                 "issues": "https://github.com/FriendsOfBehat/PageObjectExtension/issues",
-                "source": "https://github.com/FriendsOfBehat/PageObjectExtension/tree/v0.3.2"
+                "source": "https://github.com/FriendsOfBehat/PageObjectExtension/tree/v0.4.0"
             },
-            "time": "2020-11-05T20:37:07+00:00"
+            "time": "2026-06-12T14:51:50+00:00"
         },
         {
             "name": "friends-of-behat/suite-settings-extension",
@@ -19338,16 +19345,16 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v7.4.0",
+            "version": "v7.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "ab862f478513e7ca2fe9ec117a6f01a8da6e1135"
+                "reference": "b75663ed96cf4756e28e3105476f220f92886cc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/ab862f478513e7ca2fe9ec117a6f01a8da6e1135",
-                "reference": "ab862f478513e7ca2fe9ec117a6f01a8da6e1135",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/b75663ed96cf4756e28e3105476f220f92886cc4",
+                "reference": "b75663ed96cf4756e28e3105476f220f92886cc4",
                 "shasum": ""
             },
             "require": {
@@ -19383,7 +19390,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v7.4.0"
+                "source": "https://github.com/symfony/css-selector/tree/v7.4.9"
             },
             "funding": [
                 {
@@ -19403,7 +19410,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-30T13:39:42+00:00"
+            "time": "2026-04-18T13:18:21+00:00"
         },
         {
             "name": "symfony/debug-bundle",
